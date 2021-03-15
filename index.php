@@ -31,11 +31,11 @@ require_once("database.php");
   <table>
     <tr>
       <th>ID</th>
-      <th>Name</th>
-      <th>NRP</th>
+      <th>Username</th>
+      <th>Password</th>
     </tr>
     <?php
-    $sql = "SELECT * FROM mahasiswa";
+    $sql = "SELECT * FROM user";
     $result = $c->query($sql);
     if ($result->num_rows > 0) {
 
@@ -44,8 +44,8 @@ require_once("database.php");
       while ($obj = $result->fetch_assoc()) {
         echo '<tr>';
         echo '<td>' . $obj['id'] . '</td>';
-        echo '<td>' . $obj['name'] . '</td>';
-        echo '<td>' . $obj['nrp'] . '</td>';
+        echo '<td>' . $obj['username'] . '</td>';
+        echo '<td>' . $obj['password'] . '</td>';
       }
     } else {
       echo "Empty table.";
