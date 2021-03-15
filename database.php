@@ -1,7 +1,7 @@
 <?php
 $dbusername = 'root';
 $dbpassword = 'mysql';
-$dbname = 'sampledb';
+$dbname = 'toko_roti';
 
 $c = new mysqli($dbusername, $dbpassword, $dbname);
 if ($c->connect_error) {
